@@ -1,7 +1,7 @@
 FROM debian:stretch
 
 RUN apt-get update -qq && \
-    apt-get install -qqy build-essential cmake python ssh wget git && \
+    apt-get install -qqy build-essential cmake python ssh wget git unzip && \
     rm -rf /var/lib/apt/lists/*
 
 RUN cd /opt && \
