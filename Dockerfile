@@ -14,7 +14,7 @@ ENV RUSTUP_HOME=/usr/local/rustup \
     PATH=/usr/local/cargo/bin:$PATH
 RUN wget -q "https://static.rust-lang.org/rustup/dist/x86_64-unknown-linux-gnu/rustup-init" && \
     chmod +x rustup-init && \
-    ./rustup-init -y --no-modify-path --default-toolchain nightly-2017-09-20 && \
+    ./rustup-init -y --no-modify-path --default-toolchain nightly-2017-11-18 && \
     rm rustup-init && \
     chmod -R a+w $RUSTUP_HOME $CARGO_HOME && \
     rustup --version && \
