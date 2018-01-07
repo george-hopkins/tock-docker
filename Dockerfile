@@ -31,6 +31,6 @@ RUN cd /opt && \
     cmake --build .
 ENV PATH "$PATH:/opt/uncrustify-uncrustify-0.65/build"
 
-RUN cargo install --vers 0.7.1 rustfmt
+RUN cargo install --vers 0.3.4 rustfmt-nightly
 
 RUN cargo install xargo
