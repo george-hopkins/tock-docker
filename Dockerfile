@@ -14,7 +14,7 @@ ENV RUSTUP_HOME=/usr/local/rustup \
     PATH=/usr/local/cargo/bin:$PATH
 RUN wget -q "https://static.rust-lang.org/rustup/dist/x86_64-unknown-linux-gnu/rustup-init" && \
     chmod +x rustup-init && \
-    ./rustup-init -y --no-modify-path --default-toolchain nightly-2018-01-05 && \
+    ./rustup-init -y --no-modify-path --default-toolchain nightly-2018-03-07 && \
     rm rustup-init && \
     chmod -R a+w $RUSTUP_HOME $CARGO_HOME && \
     rustup --version && \
@@ -31,6 +31,6 @@ RUN cd /opt && \
     cmake --build .
 ENV PATH "$PATH:/opt/uncrustify-uncrustify-0.65/build"
 
-RUN cargo install --vers 0.3.4 --force rustfmt-nightly
+RUN cargo install --vers 0.3.5 --force rustfmt-nightly
 
 RUN cargo install xargo
